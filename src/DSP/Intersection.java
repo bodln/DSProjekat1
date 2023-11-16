@@ -164,10 +164,10 @@ public class Intersection implements Runnable {
                 trafficLight = !trafficLight;
                 if (trafficLight) {
                     System.out.println("The light has turned green on the route N-S.");
-                    greenLight.signal();
+                    greenLight.signalAll();
                 } else {
                     System.out.println("The light has turned red on the route N-S.");
-                    redLight.signal();
+                    redLight.signalAll();
                 }
             } finally {
                 lock.unlock();

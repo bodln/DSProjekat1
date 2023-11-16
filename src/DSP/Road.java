@@ -33,7 +33,11 @@ public class Road implements Runnable {
 	                //System.out.println("Car " + currentCar.id + " is trying to leave road " + this.direction + ".");
 	                
 	                
-	                
+	                try {
+	                    Thread.sleep(1000);
+	                } catch (InterruptedException e) {
+	                    e.printStackTrace();
+	                }
 	                
 	                
 	                if (currentCar.origin.equals("N") || currentCar.origin.equals("S")) {
